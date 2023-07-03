@@ -104,7 +104,7 @@ class EmployeeController extends Controller
 
         $employee->fill($request->post())->save();
 
-        return redirect()->route('home')->with('success', 'Company Has Been updated successfully');
+        return redirect()->route('home')->with('success', 'Employee Has Been updated successfully');
     }
 
     /**
@@ -116,6 +116,6 @@ class EmployeeController extends Controller
     public function destroy(Employee $employee)
     {
         $employee->delete();
-        return redirect()->route('home')->with('success', 'Company has been deleted successfully');
+        return redirect()->route('home')->with('success', 'Employee has been deleted successfully');
     }
 }
